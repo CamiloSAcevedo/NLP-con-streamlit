@@ -43,7 +43,7 @@ if prompt := st.chat_input("Escribe tu mensaje..."):
         with st.chat_message("assistant"):
             with st.spinner("Pensando..."):
                 response = client.chat.completions.create(
-                    model="llama3-8b-8192",
+                    model="llama-3.3-70b-versatile",
                     messages=st.session_state.messages,
                 )
                 reply = response.choices[0].message.content
